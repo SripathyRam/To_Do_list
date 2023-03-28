@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Review</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static 'todo/bs/css/flatly.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'todo/styles2.css' %}" />
+		
+	</head>
+    <script src="https://use.fontawesome.com/a6f0361695.js"></script>
+
+    <h2 id="fh2">WE APPRECIATE YOUR REVIEW!</h2>
+    <h5 id="fh6">Your review will help us to improve our web hosting quality products, and customer services.</h5>
+    <body>
+      <img id="image"src="{% static 'photo.png' %}">
+        <div class="container-fluid" id="wrapper">
+			<div class="col-lg-12 text-center">
+				<p style="font-family:Luminari " >
+					<h2>
+						<p style="color:crimson">
+					   Please Place Your Feedback!!!!!!!!!!!!!!!!!!
+						</p>
+					</h2>
+				
+				</p>
+			 </div>
+              
+      <form action="{% url 'addReview' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <label for = "Name">Name</label>
+                <input  name="Name" placeholder="Enter Your Name" class="form-control"  type="text" value="{{Name}}">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <label for = "Feedback">Your review</label>
+                <input  name="Feedback" placeholder="Enter Your Feedback" class="form-control"  type="text" value="{{Feedback}}">
+            </div>
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary" id="add-btn">Submit</button>
+            </span>
+        </div>
+      </form>
+    </body>

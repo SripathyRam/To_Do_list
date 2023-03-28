@@ -1,0 +1,46 @@
+body {
+	background: rgba(132, 195, 72, 0.8);
+	font-family: 'Oswald', 'Futura', 'sans-serif','Luminari';
+}
+
+#background-video {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+  }
+  
+#wrapper {
+	margin-top: 10% !important;
+}
+#content {
+	background: rgb(130, 158, 59);
+	padding: 25px;
+}
+#content > h2 {
+	font-size: 18px;
+	text-align: center;
+	padding-top: 0;
+}
+.t10 {
+	margin-top: 10px;
+}
+.t20 {
+	margin-top: 20px;
+}
+.todo-completed {
+	text-decoration: line-through;
+	background: rgba(47, 172, 19, 0.3);
+}
+footer {
+	margin-top: 20px;
+	color: rgb(67, 18, 190);
+}
+.list-group-item {
+	color: black;
+}
